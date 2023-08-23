@@ -529,6 +529,7 @@
   "reply_indicator.cancel": "Prekliči",
   "report.block": "Blokiraj",
   "report.block_explanation": "Njihovih objav ne boste videli. Oni ne bodo videli vaših objav, niti vam ne morejo slediti. Lahko bodo ugotovili, da so blokirani.",
+  "report.categories.legal": "Pravno obvestilo",
   "report.categories.other": "Drugo",
   "report.categories.spam": "Neželeno",
   "report.categories.violation": "Vsebina krši eno ali več pravil strežnika",

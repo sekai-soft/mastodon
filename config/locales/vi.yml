@@ -800,6 +800,10 @@ vi:
     system_checks:
       database_schema_check:
         message_html: Có cơ sở dữ liệu đang chờ xử lý. Xin khởi động nó để ứng dụng có thể hoạt động một cách ổn định nhất
+      elasticsearch_preset:
+        action: Xem tài liệu
+      elasticsearch_preset_single_node:
+        action: Xem tài liệu
       elasticsearch_running_check:
         message_html: Không thể kết nối Elasticsearch. Hãy kiểm tra xem nó có đang chạy, hay tìm kiếm full-text bị tắt
       elasticsearch_version_check:
@@ -1449,6 +1453,15 @@ vi:
     other: Khác
     posting_defaults: Mặc định cho tút
     public_timelines: Bảng tin
+  privacy:
+    hint_html: "<strong>Tùy chỉnh cách mọi người tìm thấy hồ sơ và các tút của bạn.</strong> Nhiều tính năng trong Mastodon có thể giúp bạn tiếp cận nhiều đối tượng hơn khi được bật. Hãy xem lại các cài đặt này để đảm bảo chúng phù hợp với bạn."
+    privacy: Riêng tư
+    privacy_hint_html: Kiểm soát mức độ chi tiết bạn muốn tiết lộ. Mọi người khám phá các hồ sơ thú vị và các ứng dụng thú vị bằng cách theo dõi những người khác và xem họ đăng từ ứng dụng nào, nhưng có thể bạn muốn ẩn nó đi.
+    reach: Tiếp cận
+    reach_hint_html: Kiểm soát cách bạn được khám phá và theo dõi. Bạn có muốn tút của mình xuất hiện trên màn hình Khám phá không? Bạn có muốn người khác nhìn thấy bạn trong các đề xuất theo dõi của họ không? Bạn muốn tự động chấp nhận tất cả những người theo dõi mới hay tự duyệt từng người theo dõi?
+    search: Tìm kiếm
+    search_hint_html: Kiểm soát cách tìm thấy bạn. Bạn có muốn mọi người tìm thấy bạn bằng những gì bạn đã đăng công khai không? Bạn có muốn những người bên ngoài Mastodon tìm thấy hồ sơ của bạn khi tìm kiếm trên web không? Xin lưu ý rằng không thể đảm bảo loại trừ hoàn toàn khỏi tất cả các công cụ tìm kiếm đối với thông tin công khai.
+    title: Riêng tư và tiếp cận
   privacy_policy:
     title: Chính sách bảo mật
   reactions:

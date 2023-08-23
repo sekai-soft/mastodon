@@ -529,6 +529,7 @@
   "reply_indicator.cancel": "取消",
   "report.block": "屏蔽",
   "report.block_explanation": "你将无法看到他们的嘟文。他们也将无法看到你的嘟文或关注你。他们将能够判断出他们被屏蔽了。",
+  "report.categories.legal": "法律义务",
   "report.categories.other": "其他",
   "report.categories.spam": "垃圾信息",
   "report.categories.violation": "内容违反一条或多条服务器规则",

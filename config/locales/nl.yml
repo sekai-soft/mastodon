@@ -814,6 +814,20 @@ nl:
     system_checks:
       database_schema_check:
         message_html: Niet alle databasemigraties zijn voltooid. Je moet deze uitvoeren om er voor te zorgen dat de applicatie blijft werken zoals het hoort
+      elasticsearch_health_red:
+        message_html: Elasticsearch-cluster is ongezond (rode status), zoekfuncties zijn niet beschikbaar
+      elasticsearch_health_yellow:
+        message_html: Elasticsearch-cluster is ongezond (gele status), misschien wil je de reden onderzoeken
+      elasticsearch_index_mismatch:
+        message_html: Elasticsearch index-toewijzingen zijn verouderd. Voer <code>tootctl search deploy --only=%{value}</code> uit
+      elasticsearch_preset:
+        action: Zie documentatie
+        message_html: Uw Elasticsearch-cluster heeft meer dan één knooppunt, maar Mastodon is niet geconfigureerd om ze te gebruiken.
+      elasticsearch_preset_single_node:
+        action: Zie documentatie
+        message_html: Uw Elasticsearch-cluster heeft slechts één knooppunt, <code>ES_PRESET</code> moet worden ingesteld op <code>single_node_cluster</code>.
+      elasticsearch_reset_chewy:
+        message_html: Uw Elasticsearch-systeemindex is verouderd vanwege een instellingswijziging. Voer <code>tootctl search deploy --reset-chewy</code> uit om het bij te werken.
       elasticsearch_running_check:
         message_html: Kon geen verbinding maken met Elasticsearch. Controleer dat Elasticsearch wordt uitgevoerd of schakel full-text-zoeken uit
       elasticsearch_version_check:
@@ -1475,6 +1489,15 @@ nl:
     other: Overig
     posting_defaults: Standaardinstellingen voor berichten
     public_timelines: Openbare tijdlijnen
+  privacy:
+    hint_html: "<strong>Hoe wil je dat jouw profiel en berichten kunnen worden gevonden?</strong> Een verscheidenheid aan functies in Mastodon kunnen je helpen om een groter publiek te bereiken als ze zijn ingeschakeld. Neem rustig de tijd om deze instellingen te bekijken, om er zo zeker van te zijn dat ze aan jouw wensen voldoen."
+    privacy: Privacy
+    privacy_hint_html: Hoeveel informatie wil je aan andere gebruikers kwijt? Mensen ontdekken interessante accounts en coole apps door te bekijken welke accounts jij volgt en door te bekijken welke app jij gebruikt voor het plaatsen van berichten. Het kan achter zo zijn dat je dit liever verborgen houdt.
+    reach: Bereik
+    reach_hint_html: Wil je door nieuwe mensen worden ontdekt en gevolgd? Wil je dat jouw berichten op de pagina Verkennen worden getoond? Wil je aan andere mensen worden aanbevolen en in de gebruikersgids staan? Wil je nieuwe volgers automatisch accepteren of wil je die handmatig kunnen goedkeuren?
+    search: Zoeken
+    search_hint_html: Hoe wil je worden gevonden? Wil je dat mensen jou kunnen vinden via jouw openbare berichten? Wil je dat mensen buiten Mastodon jouw profiel kunnen vinden wanneer ze op het web zoeken? Vergeet echter niet dat jouw openbare berichten en profiel nooit volledig beschermd kunnen worden tegen zoekmachines.
+    title: Privacy en bereik
   privacy_policy:
     title: Privacybeleid
   reactions:

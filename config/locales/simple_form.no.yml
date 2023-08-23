@@ -3,6 +3,7 @@
   simple_form:
     hints:
       account:
+        discoverable: Dine offentlige innlegg og profil kan bli omtalt eller anbefalt i ulike deler av Mastodon, og profilen din kan foreslås til andre brukere.
         display_name: Ditt fulle navn eller ditt morsomme navn.
         fields: Din hjemmeside, uttalelse, alder, eller alt annet du vil.
         note: 'Du kan @nevne andre eller #emneknagger.'
@@ -116,6 +117,8 @@
       sessions:
         otp: Angi tofaktorkoden fra din telefon eller bruk en av dine gjenopprettingskoder.
         webauthn: Hvis det er en USB-nøkkel må du sette den inn og om nødvendig trykke på den.
+      settings:
+        indexable: Profilsiden din kan vises i søkeresultater på Google, Bing og så videre.
       tag:
         name: Du kan bare forandre bruken av store/små bokstaver, f.eks. for å gjøre det mer lesbart
       user:

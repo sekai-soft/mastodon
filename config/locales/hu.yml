@@ -814,6 +814,20 @@ hu:
     system_checks:
       database_schema_check:
         message_html: Vannak esedékes adatbázis migrációink. Kérlek, futtasd őket, hogy biztosítsd, hogy az alkalmazás megfelelően működjön
+      elasticsearch_health_red:
+        message_html: Az Elasticsearch klaszter egészségtelen (piros állapotú), a keresési funkciók nem érhetők el
+      elasticsearch_health_yellow:
+        message_html: Az Elasticsearch klaszter egészségtelen (sárga állapotú), érdemes megvizsgálni az okát
+      elasticsearch_index_mismatch:
+        message_html: Az Elasticsearch index leképezések elavultak. Futtasd le a <code>tootctl search deploy --only=%{value}</code> parancsot
+      elasticsearch_preset:
+        action: Dokumentáció megtekintése
+        message_html: Az Elasticsearch klaszter egynél több csomóponttal rendelkezik, de a Mastodon nincs beállítva ezek használatára.
+      elasticsearch_preset_single_node:
+        action: Dokumentácó megtekintése
+        message_html: Az Elasticsearch klaszterednek csak egy csomópontja van, az <code>ES_PRESET</code> értéket <code>single_node_cluster</code> értékre kell állítani.
+      elasticsearch_reset_chewy:
+        message_html: Az Elasticsearch rendszerindexed egy beállításmódosítás miatt elavult. A frissítéshez futtasd a <code>tootctl search deploy --reset-chewy</code> parancsot.
       elasticsearch_running_check:
         message_html: Nem sikerült az Elasticsearchhöz kapcsolódni. Ellenőrizze, hogy fut-e, vagy kapcsolja ki a teljes szöveges keresést.
       elasticsearch_version_check:
@@ -1475,6 +1489,15 @@ hu:
     other: Egyéb
     posting_defaults: Bejegyzések alapértelmezései
     public_timelines: Nyilvános idővonalak
+  privacy:
+    hint_html: "<strong>Testreszabható a profil és a bejegyzések megjelenése.</strong> A Mastodon számos funkciója segíthet szélesebb közönség elérésében, ha engedélyezve van. Szánj egy percet a beállítások áttekintésére, hogy megbizonyosodj arról, hogy ezek megfelelnek a te felhasználási esetednek."
+    privacy: Adatvédelem
+    privacy_hint_html: Szabályozd, hogy mások számára miket szeretnél nyilvánosságra hozni. Az emberek érdekes profilokat és nagyszerű alkalmazásokat fedezhetnek fel, amikor böngésznek mások követései között és látják, hogy mely alkalmazásokból tesznek közzé bejegyzéseket, de az is lehet, hogy inkább elrejtenéd ezeket az infókat.
+    reach: Elérés
+    reach_hint_html: Szabályozd, hogy szeretnéd-e, hogy új emberek felfedezzenek és kövessenek. Szeretnéd, hogy a bejegyzéseid megjelenjenek a Felfedezés képernyőn? Szeretnéd, hogy mások is lássanak téged a követési ajánlataikban? Szeretnéd automatikusan elfogadni az összes új követőt vagy egyesével szabályozni mindegyiket?
+    search: Keresés
+    search_hint_html: Irányítsd, hogyan találjanak meg. Szeretnéd, hogy az emberek megtaláljanak az alapján, amiről nyilvános bejegyzést írtál? Szeretnéd, hogy a Mastodonon kívüli emberek megtalálják a profilodat, amikor az interneten keresnek? Ne feledd, hogy a nyilvános információk esetében nem garantálható az összes keresőmotorból való teljes kizárás.
+    title: Adatvédelem és elérés
   privacy_policy:
     title: Adatvédelmi irányelvek
   reactions:

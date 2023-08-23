@@ -3,9 +3,12 @@ pt-PT:
   simple_form:
     hints:
       account:
+        discoverable: As suas publicações e perfil públicos podem ser destacados ou recomendados em várias áreas do Mastodon e o seu perfil pode ser sugerido a outros utilizadores.
         display_name: O seu nome completo ou o seu nome divertido.
         fields: A sua página inicial, os seus pronomes, idade e tudo o que quiser.
         note: 'Pode @mencionar outras pessoas ou #hashtags.'
+        show_collections: As pessoas podem navegar pelas listas das pessoas que segue e dos seus seguidores. Independentemente disso, as pessoas que segue verão que você as segue.
+        unlocked: As pessoas podem segui-lo/a sem pedir a sua aprovação. Desmarque se quiser rever os pedidos para seguir e escolher se aceita ou rejeita os novos seguidores.
       account_alias:
         acct: Especifique o utilizador@domínio da conta de onde você deseja migrar
       account_migration:
@@ -116,6 +119,9 @@ pt-PT:
       sessions:
         otp: 'Insira o código de autenticação em duas etapas gerado pelo seu telemóvel ou use um dos seus códigos de recuperação:'
         webauthn: Se for uma chave USB tenha certeza de inseri-la e, se necessário, toque nela.
+      settings:
+        indexable: A sua página de perfil pode aparecer nos resultados de pesquisa no Google, Bing e outros.
+        show_application: Independentemente disso será sempre capaz de ver em que aplicação publicou a sua mensagem.
       tag:
         name: Só pode alterar a capitalização das letras, por exemplo, para torná-las mais legíveis
       user:
@@ -133,9 +139,12 @@ pt-PT:
         url: Para onde os eventos serão enviados
     labels:
       account:
+        discoverable: Destacar perfil e publicações nos algoritmos de descoberta
         fields:
           name: Rótulo
           value: Conteúdo
+        show_collections: Mostrar quem sigo e os meus seguidores no perfil
+        unlocked: Aceitar automaticamente novos seguidores
       account_alias:
         acct: Nome de utilizador da conta antiga
       account_migration:
@@ -283,6 +292,9 @@ pt-PT:
         trending_tag: Uma nova publicação em alta requer avaliação
       rule:
         text: Regra
+      settings:
+        indexable: Incluir página de perfil nos motores de busca
+        show_application: Mostrar de que aplicação criou uma publicação
       tag:
         listable: Permitir que esta etiqueta apareça em pesquisas e no diretório de perfis
         name: Etiqueta

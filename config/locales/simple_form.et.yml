@@ -3,9 +3,12 @@ et:
   simple_form:
     hints:
       account:
+        discoverable: Su profiili ja avalikke postitusi võidakse Mastodoni erinevates piirkondades esile tõsta või soovitada ning su profiili soovitada teistele kasutajatele.
         display_name: Su täisnimi või naljanimi.
         fields: Su koduleht, sugu, vanus. Mistahes, mida soovid.
         note: 'Saad @mainida teisi inimesi või #silte.'
+        show_collections: Inimesed saavad sirvida su jälgijaid ja jälgitavaid. Inimesed, keda sa jälgid, näevad seda sõltumata häälestuse valikust.
+        unlocked: Inimesed saavad sind jälgima hakata kinnitamist taotlemata. Eemalda märge, kui soovid jälgimistaotlusi üle vaadata ja valida, kas nõustuda või keelduda uute jälgijatega.
       account_alias:
         acct: Sisesta konto kasutajanimi@domeen, mille soovid siia ümber kolida
       account_migration:
@@ -116,6 +119,9 @@ et:
       sessions:
         otp: 'Kaheastmelise autentimise kood telefonirakendusest või mõni taastekood:'
         webauthn: Kui see on USB-võti, sisesta see ning vajadusel aktiveeri.
+      settings:
+        indexable: Su profiilileht võib ilmuda Google, Bingi ja teiste otsimootorite tulemustes.
+        show_application: Sa saad sõltumata sellest vaadata, milline äpp su postituse postitas.
       tag:
         name: Saad muuta ainult tähtede suurtähelisust, näiteks selleks, et muuta seda loetavamaks
       user:
@@ -133,9 +139,12 @@ et:
         url: Kuhu sündmused saadetakse
     labels:
       account:
+        discoverable: Tõsta postitused ja profiil avastamise algoritmides esile
         fields:
           name: Nimetus
           value: Sisu
+        show_collections: Näita profiilil jälgitavaid ja jälgijaid
+        unlocked: Nõustu automaatselt uute jälgijatega
       account_alias:
         acct: Vana konto aadress
       account_migration:
@@ -283,6 +292,9 @@ et:
         trending_tag: Uus trend vajab ülevaatust
       rule:
         text: Reegel
+      settings:
+        indexable: Kaasa profiilileht otsimootoritesse
+        show_application: Näita, millisest äpist postituse saatsid
       tag:
         listable: Luba sellel sildil ilmuda profiilide kataloogis
         name: Silt

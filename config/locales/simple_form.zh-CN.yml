@@ -3,9 +3,11 @@ zh-CN:
   simple_form:
     hints:
       account:
+        discoverable: 您的公开帖子和个人资料可能会在Mastodon的各个领域中被推荐，您的个人资料可能会被推荐给其他用户。
         display_name: 您的全名或昵称。
         fields: 你的主页、人称代词、年龄，以及任何你想要添加的内容。
         note: '您可以提及 @其他人 或 #标签 。'
+        show_collections: 人们将能够浏览您的关注和追随者。您关注的人会看到您关注他们。
       account_alias:
         acct: 指定你想要迁移过来的原账号：用户名@站点域名
       account_migration:
@@ -116,6 +118,8 @@ zh-CN:
       sessions:
         otp: 输入你手机应用上生成的双重认证码，或者任意一个恢复代码：
         webauthn: 如果是 USB 密钥，请确保将其插入，如有必要，请点击它。
+      settings:
+        indexable: 您的个人资料页面可能会出现在Google、Bing等搜索结果中。
       tag:
         name: 你只能改变字母的大小写，让它更易读
       user:
@@ -136,6 +140,8 @@ zh-CN:
         fields:
           name: 标签
           value: 内容
+        show_collections: 在个人资料中显示关注和关注者
+        unlocked: 自动接受新关注者
       account_alias:
         acct: 处理旧账号
       account_migration:
@@ -283,6 +289,8 @@ zh-CN:
         trending_tag: 新热门待审核
       rule:
         text: 规则
+      settings:
+        indexable: 允许搜索引擎索引个人资料页面
       tag:
         listable: 允许这个话题标签在用户目录中显示
         name: 话题标签

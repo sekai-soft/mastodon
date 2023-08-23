@@ -813,6 +813,10 @@ eu:
     system_checks:
       database_schema_check:
         message_html: Aplikatu gabeko datu-basearen migrazioak daude. Exekutatu aplikazioak esperotako portaera izan dezan
+      elasticsearch_health_red:
+        message_html: Elasticsearch-en klusterra ez dago osasuntsu (egoera gorria), bilaketa-eginbideak ez daude erabilgarri
+      elasticsearch_health_yellow:
+        message_html: Elasticsearch-en klusterra ez dago osasuntsu (egoera horia), baliteke arrazoia ikertu nahi izatea
       elasticsearch_running_check:
         message_html: Ezin izan da Elasticsearch-era konektatu. Egiaztatu martxan dagoela edo desgaitu testu osoko bilaketa
       elasticsearch_version_check:

@@ -814,6 +814,20 @@ pt-PT:
     system_checks:
       database_schema_check:
         message_html: Há migrações de base de dados pendentes. Queira executá-las, para garantir que a aplicação se comporta como o esperado
+      elasticsearch_health_red:
+        message_html: O cluster elasticsearch não está de boa saúde (estado vermelho), as funcionalidades de pesquisa não estão disponíveis
+      elasticsearch_health_yellow:
+        message_html: O cluster elasticsearch não está de boa saúde (estado amarelo), pode querer investigar o motivo
+      elasticsearch_index_mismatch:
+        message_html: Os mapeamentos elasticsearch estão desatualizados. Por favor, execute <code>tootctl search deploy --only=%{value}</code>
+      elasticsearch_preset:
+        action: Ver a documentação
+        message_html: O seu cluster elasticsearch tem mais de um nó, mas o Mastodon não está configurado para os usar.
+      elasticsearch_preset_single_node:
+        action: Ver documentação
+        message_html: O seu cluster elasticsearch tem apenas um nó, <code>ES_PRESET</code> deve ser configurado para <code>single_node_cluster</code>.
+      elasticsearch_reset_chewy:
+        message_html: O seu índice de sistema elasticsearch está desatualizado devido a uma mudança de configuração. Por favor, execute <code>tootctl search deploy --reset-chewy</code> para o atualizar.
       elasticsearch_running_check:
         message_html: Não foi possível conectar ao Elasticsearch. Por favor, verifique se está em execução, ou desabilite a pesquisa de texto completo
       elasticsearch_version_check:
@@ -1475,6 +1489,15 @@ pt-PT:
     other: Outro
     posting_defaults: Padrões de publicação
     public_timelines: Cronologias públicas
+  privacy:
+    hint_html: "<strong>Defina como quer que o seu perfil e as suas publicações sejam encontrados.</strong> Várias funcionalidades no Mastodon podem ajudar a alcançar um público mais amplo quando ativadas. Tire um momento para rever estas definições para garantir que se aplicam ao seu caso de uso."
+    privacy: Privacidade
+    privacy_hint_html: Controle quanto pretende partilhar para o benefício de outros. As pessoas descobrem perfis e aplicações interessantes navegando pelos seguidores de outras pessoas e vendo que aplicações eles usam para publicar, mas pode preferir não revelar essa informação.
+    reach: Alcance
+    reach_hint_html: Controle se quer ser descoberto e seguido por novas pessoas. Quer que as suas publicações apareçam no ecrã Explorar? Pretende que outras pessoas o vejam nas suas recomendações? Quer aceitar todos os novos seguidores automaticamente, ou ter um controlo individual sobre cada um?
+    search: Pesquisa
+    search_hint_html: Controle como deseja ser encontrado. Quer que as pessoas o encontrem com base nas suas publicações? Que pessoas fora do Mastodon encontrem o seu perfil quando pesquisarem na web? Note que a exclusão total de todos os motores de busca não pode ser garantida para informação pública.
+    title: Privacidade e alcance
   privacy_policy:
     title: Política de Privacidade
   reactions:

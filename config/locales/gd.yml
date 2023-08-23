@@ -1213,7 +1213,7 @@ gd:
     add_new: Cuir fear ùr ris
     errors:
       limit: Bhrosnaich thu an uiread as motha de thagaichean hais mu thràth
-    hint_html: "<strong>Dè th’ anns na tagaichean hais brosnaichte?</strong> Thèid an sealltainn gu follaiseach air a’ phròifil phoblach agad agus ’s urrainnear na postaichean poblach agad sa bheil na tagaichean hais sònraichte sin a bhrabhsadh leotha. ’S e deagh-acainn a th’ annta airson sùil a chumail air obair chruthachail no pròiseactan fada."
+    hint_html: "<strong>Brosnaich na tagaichean hais as cudromaiche agad air a’ phròifil agad.</strong> ’S e deagh-acainn a th’ annta airson sùil a chumail air an obair chruthachail no na pròiseactan fada agad on a thèid na tagaichean hais brosnaichte a shealltainn gu follaiseach air a’ phròifil agad agus ’s urrainnear na postaichean agad inntrigeadh gu luath leotha."
   filters:
     contexts:
       account: Pròifilean
@@ -1527,6 +1527,15 @@ gd:
     other: Eile
     posting_defaults: Bun-roghainnean a’ phostaidh
     public_timelines: Loidhnichean-ama poblach
+  privacy:
+    hint_html: "<strong>Gnàthaich an dòigh air an dèid a’ phròifil ’s na postaichean agad a lorg.</strong> Tha grunn ghleusan aig Mastodon a chuidicheas ach an ruig thu èisteachd nas fharsainge nuair a bhios iad an comas. Thoir sùil air na roghainnean seo a dhèanamh cinnteach gum freagair iad ri d’ fheumalachdan."
+    privacy: Prìobhaideachd
+    privacy_hint_html: Stiùirich na tha thu airson foillseachadh do chàch. Gheibh daoine lorg air pròifilean inntinneach is deagh aplacaidean a’ brabhsadh cò tha daoine eile a’ leantainn ’s a’ faicinn nan aplacaidean a chleachdas iad airson postadh ach dh’fhaoidte gum b’ fheàrr leat seo a chumail falaichte.
+    reach: Ruigse
+    reach_hint_html: Stiùirich am bu mhiann leat gun lorg ’s gun lean daoine ùra thu gus nach bu mhiann. A bheil thu airson ’s gun nochd na postaichean agad air duilleag an rùrachaidh? No gum faic càch thu am measg nam molaidhean leantainn aca? An gabh thu ri luchd-leantainn ùr sam bith gu fèin-obrachail no an cùm thu fhèin smachd air gach neach fa leth?
+    search: Lorg
+    search_hint_html: Stiùirich an dòigh air an dèid do lorg. Am bu mhiann leat gun lorg daoine thu leis na phostaich thu gu poblach? Am bu mhiann leat gun lorg daoine taobh a-muigh Mastodon a’ phròifil agad nuair a bhios iad a lorg an lìn? Thoir an aire nach urrainn dhuinn gealladh le cinnt gun dèid am fiosrachadh poblach agad a dhùnadh a-mach gu tur às gach einnsean-luirg poblach.
+    title: Prìobhaideachd ’s ruigse
   privacy_policy:
     title: Poileasaidh prìobhaideachd
   reactions:

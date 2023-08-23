@@ -800,6 +800,10 @@ zh-CN:
     system_checks:
       database_schema_check:
         message_html: 有待处理的数据库迁移。请运行它们以确保应用程序正常运行。
+      elasticsearch_preset:
+        action: 查看文档
+      elasticsearch_preset_single_node:
+        action: 查看文档
       elasticsearch_running_check:
         message_html: 无法连接到 Elasticsearch。请检查它是否正在运行，或禁用全文搜索
       elasticsearch_version_check:
@@ -1449,6 +1453,10 @@ zh-CN:
     other: 其他
     posting_defaults: 发布默认值
     public_timelines: 公共时间轴
+  privacy:
+    privacy: 隐私
+    reach: A. 范围
+    search: 搜索
   privacy_policy:
     title: 隐私政策
   reactions:

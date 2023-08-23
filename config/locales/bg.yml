@@ -770,6 +770,7 @@ bg:
           approved: Изисква се одобрение за регистриране
           none: Никой не може да се регистрира
           open: Всеки може да се регистрира
+      title: Настройки на сървъра
     site_uploads:
       delete: Изтриване на качения файл
       destroyed_msg: Успешно изтриване на качването на сайта!
@@ -1263,12 +1264,14 @@ bg:
       bookmarks_html: На път сте да <strong>замените списъка си с отметки</strong> с до <strong>%{total_items} публикации</strong> от <strong>%{filename}</strong>.
       domain_blocking_html: На път сте да <strong>замените списъка си с блокирани домейни</strong> с до <strong>%{total_items} домейна</strong> от <strong>%{filename}</strong>.
       following_html: На път сте да <strong>последвате</strong> до <strong>%{total_items} акаунта</strong> от <strong>%{filename}</strong> и <strong>да спрете да следвате някой друг</strong>.
+      lists_html: На път сте да <strong>замените списъците си</strong> със съдържание от <strong>%{filename}</strong>. До <strong>%{total_items} акаунта</strong> ще се добавят към новите списъци.
       muting_html: На път сте да <strong>замените списъка си със заглушени акаунти</strong> с до <strong>%{total_items} акаунта</strong> от <strong>%{filename}</strong>.
     preambles:
       blocking_html: На път сте да <strong>блокирате</strong> до <strong>%{total_items} акаунта</strong> от <strong>%{filename}</strong>.
       bookmarks_html: На път сте да добавите до <strong>%{total_items} публикации</strong> от <strong>%{filename}</strong> в <strong>отметките</strong> си.
       domain_blocking_html: На път сте да <strong>блокирате</strong> до <strong>%{total_items} домейна</strong> от <strong>%{filename}</strong>.
       following_html: На път сте да <strong>последвате</strong> до <strong>%{total_items} акаунта</strong> от <strong>%{filename}</strong>.
+      lists_html: На път сте да добавите до <strong>%{total_items} акаунта</strong> от <strong>%{filename}</strong> към вашите <strong>списъци</strong>. Нови списъци ще се сътворят, ако няма списъци за добавяне.
       muting_html: На път сте да <strong>заглушите</strong> до <strong>%{total_items} акаунта</strong> от <strong>%{filename}</strong>.
     preface: Можеш да импортираш някои данни, като например всички хора, които следваш или блокираш в акаунта си на тази инстанция, от файлове, създадени чрез експорт в друга инстанция.
     recent_imports: Скорошни внасяния
@@ -1285,6 +1288,7 @@ bg:
       bookmarks: Внасяне на отметките
       domain_blocking: Внасяне на блокираните домейни
       following: Внасяне на последваните акаунти
+      lists: Внасяне на списъци
       muting: Внасяне на заглушените акаунти
     type: Тип на внасяне
     type_groups:
@@ -1295,6 +1299,7 @@ bg:
       bookmarks: Отметки
       domain_blocking: Списък с блокирания на домейни
       following: Списък на последователите
+      lists: Списъци
       muting: Списък заглушавания
     upload: Качване
   invites:
@@ -1470,6 +1475,14 @@ bg:
     other: Друго
     posting_defaults: По подразбиране за публикации
     public_timelines: Публични инфопотоци
+  privacy:
+    hint_html: "<strong>Персонализирайте как искате профилът ви и публикациите ви да се намират.</strong> Разнообразие от функции в Mastodon може да ви помогнат да достигнете по-широка публика, когато е включено. Отделете малко време, за да прегледате тези настройки, за да се уверите, че отговарят на вашия случай на употреба."
+    privacy: Поверителност
+    reach: Обхват
+    reach_hint_html: Управлявайте дали искате да бъдете открити и последвани от нови хора. Искате ли публикациите ви да се появяват в главния екран? Искате ли другите да ви виждат в препоръките им за последване? Желаете ли да приемате автоматично всички нови последователи или да имате подробен контрол върху всеки един?
+    search: Търсене
+    search_hint_html: Управлявайте как искате да бъдете открити. Желаете ли хората да ви открият по това, за което сте публикували публично? Искате ли хората извън Mastodon да намират профила ви, търсейки из мрежата? Обърнете внимание, че общото изключване от всички търсачки не може да гарантира за публичната информация.
+    title: Поверителност и обхват
   privacy_policy:
     title: Политика за поверителност
   reactions:

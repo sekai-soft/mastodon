@@ -3,9 +3,12 @@ nn:
   simple_form:
     hints:
       account:
+        discoverable: Dine offentlige innlegg og profil kan bli omtalt eller anbefalt i ulike deler av Mastodon, og profilen din kan foreslås til andre brukere.
         display_name: Ditt fulle namn eller ditt tøysenamn.
         fields: Heimesida di, pronomen, alder, eller kva du måtte ynskje.
         note: 'Du kan @nemne folk eller #emneknaggar.'
+        show_collections: Andre kan sjå kven du følgjer og kven som følgjer deg. Dei du følgjer kan alltid sjå at du følgjer dei.
+        unlocked: Alle kan følgje deg utan å måtte spørje om det. Vel bort om du vil gå gjennom førespurnadar om å følgje deg og seie ja eller nei.
       account_alias:
         acct: Angi brukarnamn@domene til brukaren du ynskjer å flytta frå
       account_migration:
@@ -116,6 +119,8 @@ nn:
       sessions:
         otp: Angi tofaktorkoden fra din telefon eller bruk en av dine gjenopprettingskoder.
         webauthn: Om det er ein USB-nøkkel må du setja han inn og om nødvendig trykkja på han.
+      settings:
+        indexable: Profilsiden din kan vises i søkeresultater på Google, Bing og så videre.
       tag:
         name: Du kan berre endra bruken av store/små bokstavar, t. d. for å gjera det meir leseleg
       user:
@@ -136,6 +141,8 @@ nn:
         fields:
           name: Merkelapp
           value: Innhald
+        show_collections: Vis følgjer og følgjare på profilen
+        unlocked: Godta nye følgjare automatisk
       account_alias:
         acct: Brukarnamnet på den gamle kontoen
       account_migration:

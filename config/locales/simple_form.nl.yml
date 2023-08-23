@@ -3,9 +3,12 @@ nl:
   simple_form:
     hints:
       account:
+        discoverable: Jouw openbare berichten kunnen worden uitgelicht op verschillende plekken binnen Mastodon en jouw account kan worden aanbevolen aan andere gebruikers.
         display_name: Jouw volledige naam of een leuke bijnaam.
         fields: Jouw website, persoonlijke voornaamwoorden, leeftijd, alles wat je maar kwijt wilt.
         note: 'Je kunt andere mensen @vermelden of #hashtags gebruiken.'
+        show_collections: Mensen kunnen zien wie jij volgt en wie jou volgen.
+        unlocked: Mensen kunnen jou volgen zonder daarvoor toestemming te hoeven vragen. Wanneer je nieuwe volgers handmatig wil goedkeuren moet je deze optie deselecteren.
       account_alias:
         acct: Vermeld de gebruikersnaam@domein van het account vanwaar je wilt verhuizen
       account_migration:
@@ -116,6 +119,9 @@ nl:
       sessions:
         otp: 'Voer de tweestaps-toegangscode vanaf jouw mobiele telefoon in of gebruik een van jouw herstelcodes:'
         webauthn: Wanneer het een USB-sleutel is, zorg er dan voor dat je deze in de computer steekt en, wanneer nodig, activeert.
+      settings:
+        indexable: Jouw profielpagina kan in de zoekresultaten van Google, Bing, DuckDuckGo en andere zoekmachines verschijnen.
+        show_application: Je kunt zelf altijd zien met welke app je een bericht hebt geplaatst.
       tag:
         name: Je kunt elk woord met een hoofdletter beginnen, om zo bijvoorbeeld de tekst leesbaarder te maken
       user:
@@ -133,9 +139,12 @@ nl:
         url: Waar gebeurtenissen naartoe worden verzonden
     labels:
       account:
+        discoverable: Jouw account en berichten laten uitlichten door Mastodon
         fields:
           name: Label
           value: Inhoud
+        show_collections: Accounts die jij volgt en die jou volgen op je profiel tonen
+        unlocked: Automatisch nieuwe volgers accepteren
       account_alias:
         acct: Mastodonadres van het oude account
       account_migration:
@@ -283,6 +292,9 @@ nl:
         trending_tag: Nieuwe trend vereist beoordeling
       rule:
         text: Regel
+      settings:
+        indexable: Zoekmachines jouw profielpagina laten vinden
+        show_application: App tonen die je voor het plaatsen van berichten gebruikt
       tag:
         listable: Toestaan dat deze hashtag in zoekopdrachten en aanbevelingen te zien valt
         name: Hashtag

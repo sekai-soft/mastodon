@@ -842,6 +842,20 @@ pl:
     system_checks:
       database_schema_check:
         message_html: Istnieją oczekujące migracje bazy danych. Uruchom je, aby upewnić się, że aplikacja działa tak, jak powinna
+      elasticsearch_health_red:
+        message_html: 'Klaster Elasticseach jest chory (status: czerwony); szukanie jest niedostępne'
+      elasticsearch_health_yellow:
+        message_html: 'Klaster Elasticseach jest chory (status: żółty); możliwe, że chcesz zbadać tego powód'
+      elasticsearch_index_mismatch:
+        message_html: Mapa indeksu Elasticsearch jest przestarzała. Uruchom <code>tootctl search deploy --only=%{value}</code>
+      elasticsearch_preset:
+        action: Dokumentacja
+        message_html: Twój klaster Elasticsearch ma więcej niż jeden node, ale Mastodon nie jest odpowiednio ustawiony by ich używać.
+      elasticsearch_preset_single_node:
+        action: Dokumentacja
+        message_html: Twój klaster Elasticsearch ma tylko jeden node, więc <code>ES_PRESET</code> powinno mieć wartość <code>single_node_cluster</code>.
+      elasticsearch_reset_chewy:
+        message_html: Indeks główny Elasticsearch jest przestarzały przez zmianę ustawień. Uruchom <code>tootctl search deploy --reset-chewy</code> żeby go odświeżyć.
       elasticsearch_running_check:
         message_html: Nie można połączyć się z Elasticsearch. Sprawdź czy jest uruchomiony lub wyłącz wyszukiwanie pełnotekstowe
       elasticsearch_version_check:
@@ -1527,6 +1541,15 @@ pl:
     other: Pozostałe
     posting_defaults: Domyślne ustawienia wpisów
     public_timelines: Publiczne osie czasu
+  privacy:
+    hint_html: "<strong>Dostosuj tryb odnajdowania twojego profilu i wpisów.</strong> Funkcje Mastodona mogą pomóc ci zwiększać twoją publiczność – przejrzyj te ustawienia i dostosuj je do swojego sposobu użytkowania."
+    privacy: Prywatność
+    privacy_hint_html: Ustaw, ile chcesz ujawniać innym. Ciekawe profile i programy często znajduje się przy przeglądaniu cudzych list obserwowanych i tego, z jakich programów zamieszczają, ale może wolisz to ukryć.
+    reach: Zasięg
+    reach_hint_html: Ustaw, czy chcesz dać się odkryć i zaobserwować. Chcesz, żeby twoje wpisy pojawiały się w zakładce "Odkrywaj"? Chcesz, żeby sugerowano twoje konto do obserwacji? Chcesz przyjmować nowych obserwujących automatycznie, czy aprobować ich ręcznie?
+    search: Wyszukiwanie
+    search_hint_html: Ustaw, w jakim zakresie będziesz znajdowalny(a). Chcesz pojawiać się w wynikach po twoich publicznych wpisach? Chcesz by twój profil dało się znaleźć spoza Mastodona? Pamiętaj, że nie da się zapewnić całkowitego wykluczenia wszystkich informacji publicznie dostępnych z wyszukiwarek.
+    title: Prywatność i zasięg
   privacy_policy:
     title: Polityka prywatności
   reactions:

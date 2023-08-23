@@ -814,6 +814,16 @@ it:
     system_checks:
       database_schema_check:
         message_html: Ci sono migrazioni del database in attesa. Sei pregato di eseguirle per assicurarti che l'applicazione si comporti come previsto
+      elasticsearch_health_red:
+        message_html: Il cluster Elasticsearch non è integro (stato rosso), le funzionalità di ricerca non sono disponibili
+      elasticsearch_health_yellow:
+        message_html: Il cluster Elasticsearch non è integro (stato giallo), potresti voler indagare sul motivo
+      elasticsearch_preset:
+        action: Vedi la documentazione
+        message_html: Il tuo cluster Elasticsearch ha più di un nodo, ma Mastodon non è configurato per utilizzarli.
+      elasticsearch_preset_single_node:
+        action: Vedi la documentazione
+        message_html: Il tuo cluster Elasticsearch ha un solo nodo, <code>ES_PRESET</code> dovrebbe essere impostato su <code>single_node_cluster</code>.
       elasticsearch_running_check:
         message_html: Impossibile connettersi a Elasticsearch. Verificare che sia in esecuzione o disabilitare la ricerca full-text
       elasticsearch_version_check:
@@ -1477,6 +1487,15 @@ it:
     other: Altro
     posting_defaults: Predefinite di pubblicazione
     public_timelines: Timeline pubbliche
+  privacy:
+    hint_html: "<strong>Personalizza il modo in cui vuoi che il tuo profilo e i tuoi post vengano trovati.</strong> Una varietà di funzionalità in Mastodon possono aiutarti a raggiungere un pubblico più ampio se abilitato. Prenditi un momento per rivedere queste impostazioni per assicurarti che si adattino al tuo caso d'uso."
+    privacy: Privacy
+    privacy_hint_html: Controlla quanto tu voglia mostrare a beneficio degli altri. Le persone scoprono profili interessanti e app fantastiche sfogliando il seguito di altre persone e vedendo da quali app pubblichino, ma potresti preferire tenerlo nascosto.
+    reach: Copertura
+    reach_hint_html: Controlla se vuoi essere scoperto e seguito da nuove persone. Vuoi che i tuoi post vengano visualizzati nella schermata Esplora? Vuoi che altre persone ti vedano tra i loro consigli di utenti da seguire? Vuoi accettare automaticamente tutti i nuovi seguaci o avere un controllo granulare su ciascuno di essi?
+    search: Cerca
+    search_hint_html: Controlla come vuoi essere trovato. Vuoi che le persone ti trovino in base a ciò che hai postato pubblicamente? Vuoi che le persone al di fuori di Mastodon trovino il tuo profilo durante la ricerca sul web? Si prega di notare che l'esclusione totale da tutti i motori di ricerca non può essere garantita per le informazioni pubbliche.
+    title: Privacy e copertura
   privacy_policy:
     title: Politica sulla privacy
   reactions:

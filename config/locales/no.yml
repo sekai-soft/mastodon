@@ -1475,6 +1475,15 @@
     other: Annet
     posting_defaults: Innleggsstandarder
     public_timelines: Offentlige tidslinjer
+  privacy:
+    hint_html: "<strong>Tilpass hvordan du vil at din profil og dine innlegg skal bli funnet.</strong> En rekke funksjoner i Mastodon kan hjelpe deg med å nå et bredere publikum når de aktiverte. Ta deg et øyeblikk til å vurdere disse innstillingene for å forsikre deg om at de passer deg og ditt bruk."
+    privacy: Personvern
+    privacy_hint_html: Kontrollér hvor mye du ønsker å dele til fordel for andre. Folk oppdager interessante profiler og kule app'er ved å bla gjennom andres følgere og ved å se hvilke app'er de bruker, men du kan velge å holde det skjult.
+    reach: Tilgang
+    reach_hint_html: Kontrollér om du ønsker å kunne bli oppdaget og fulgt av nye personer. Vil du at dine innlegg vises på Utforsk-siden? Vil du at andre personer skal kunne se deg i sine følgeranbefalinger? Vil du akseptere alle nye følgere automatisk, eller godkjenne hver enkelt?
+    search: Søk
+    search_hint_html: Kontrollér hvordan du ønsker å bli oppdaget. Vil du at folk skal kunne finne deg basert på dine offentlige innlegg? Vil du at personer utenfor Mastodon skal kunne finne din profil når de søker på nettet? Vennligst husk at en total utestengelse fra alle søkemotorer ikke kan garanteres for offentlig informasjon.
+    title: Personvern og tilgang
   privacy_policy:
     title: Retningslinjer for personvern
   reactions:

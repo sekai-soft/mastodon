@@ -136,6 +136,8 @@ ko:
         fields:
           name: 라벨
           value: 내용
+        show_collections: 프로필에 팔로우와 팔로워 보이기
+        unlocked: 새 팔로워를 자동으로 수락
       account_alias:
         acct: 기존 계정의 핸들
       account_migration:
@@ -283,6 +285,8 @@ ko:
         trending_tag: 검토해야 할 새 유행
       rule:
         text: 규칙
+      settings:
+        indexable: 검색 엔진에 프로필 페이지 기재하기
       tag:
         listable: 이 해시태그가 검색과 추천에 보여지도록 허용
         name: 해시태그

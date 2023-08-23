@@ -814,6 +814,20 @@ fi:
     system_checks:
       database_schema_check:
         message_html: Tietokannan siirto on vireillä. Suorita ne varmistaaksesi, että sovellus toimii odotetulla tavalla
+      elasticsearch_health_red:
+        message_html: Elasticsearch-klusteri on epäterveessä tilassa (punainen tila), hakuominaisuudet eivät ole käytettävissä
+      elasticsearch_health_yellow:
+        message_html: Elasticsearch-klusteri on epäterveessä tilassa (keltainen tila), suosittelemme tutkimaan syyn
+      elasticsearch_index_mismatch:
+        message_html: Elasticsearch-indeksin sidokset ovat vanhentuneet. Suorita <code>tootctl search deploy --only=%{value}</code>
+      elasticsearch_preset:
+        action: Katso käyttöohjeet
+        message_html: Elasticsearch-klusterissa on useampi kuin yksi solmu, mutta Mastodonia ei ole määritetty käyttämään niitä.
+      elasticsearch_preset_single_node:
+        action: Katso käyttöohjeet
+        message_html: Elasticsearch-klusterissa on vain yksi solmu, <code>ES_PRESET</code> tulisi asettaa arvoon <code>single_node_cluster</code>.
+      elasticsearch_reset_chewy:
+        message_html: Elasticsearch-järjestelmäindeksi on vanhentunut asetusmuutoksen vuoksi. Suorita <code>tootctl search deploy --reset-chewy</code> päivittääksesi sen.
       elasticsearch_running_check:
         message_html: Ei saatu yhteyttä Elasticsearch. Tarkista, että se on käynnissä tai poista kokotekstihaku käytöstä
       elasticsearch_version_check:
@@ -1475,6 +1489,15 @@ fi:
     other: Muut
     posting_defaults: Viestien oletusasetukset
     public_timelines: Julkiset aikajanat
+  privacy:
+    hint_html: "<strong>Määritä miten haluat profiilisi ja julkaisujesi löytyvän.</strong> Mastodonissa on monia ominaisuuksia, joiden käyttöönotto voi auttaa sinua saavuttamaan laajemman yleisön. Käytä hetki tarkistaaksesi, soveltuvatko nämä asetukset sinun käyttöösi."
+    privacy: Yksityisyys
+    privacy_hint_html: Määritä miten paljon muita avustavia tietoja haluat paljastaa. Käyttäjät löytävät kiinnostavia profiileita ja hienoja sovelluksia selaamalla muiden surantoja ja näkemällä millä sovelluksilla he julkaisevat. Saatat kuitenkin haluata piilottaa nämä tiedot.
+    reach: Saavutettavuus
+    reach_hint_html: Päätä, haluatko tulla uusien käyttäjien löytämäksi ja seuraamaksi. Haluatko viestiesi näkyvän Selaa-sivulla? Haluatko käyttäjien näkevän sinut heidän seuraussuosituksissaan? Haluatko hyväksyä uudet seuraajat automaattisesti vai haluatko hyväksyä jokaisen erikseen?
+    search: Haku
+    search_hint_html: Määrittele miten haluat tulla löydetyksi. Haluatko, että ihmiset löytävät sinut julkisten postaustesi perusteella? Haluatko, että ihmiset Mastodonin ulkopuolella löytävät profiilisi tehdessään hakuja verkossa? Huomioithan, että täydellinen sulkemista kaikista hakukoneista ei voida taata julkiselle informaatiolle.
+    title: Yksityisyys ja näkyvyys
   privacy_policy:
     title: Tietosuojakäytäntö
   reactions:
