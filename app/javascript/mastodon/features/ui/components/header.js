@@ -7,6 +7,7 @@ import Avatar from 'mastodon/components/avatar';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { openModal } from 'mastodon/actions/modal';
+import { shouldShowNavPanel } from '../../../is_mobile';
 
 const Account = connect(state => ({
   account: state.getIn(['accounts', me]),
@@ -22,6 +23,19 @@ const mapDispatchToProps = (dispatch) => ({
   },
 });
 
+const navPanelToggle = (isNavPanelOpen, toggleNavPanel) => {
+  if (shouldShowNavPanel()) {
+    return null;
+  }
+  return (
+    <div style={{ width: '32px' }} onClick={toggleNavPanel} onKeyPress={toggleNavPanel} role='button' tabIndex={0}>
+      <div style={{ width: '50%', margin: '0 auto' }}>
+        {isNavPanelOpen ? <i className='fa fa-times' /> : <i className='fa fa-bars' />}
+      </div>
+    </div>
+  );
+};
+
 export default @withRouter
 @connect(null, mapDispatchToProps)
 class Header extends React.PureComponent {
@@ -33,11 +47,13 @@ class Header extends React.PureComponent {
   static propTypes = {
     openClosedRegistrationsModal: PropTypes.func,
     location: PropTypes.object,
+    isNavPanelOpen: PropTypes.bool.isRequired,
+    toggleNavPanel: PropTypes.func.isRequired,
   };
 
   render () {
     const { signedIn } = this.context.identity;
-    const { location, openClosedRegistrationsModal } = this.props;
+    const { location, openClosedRegistrationsModal, isNavPanelOpen, toggleNavPanel } = this.props;
 
     let content;
 
@@ -79,6 +95,7 @@ class Header extends React.PureComponent {
 
         <div className='ui__header__links'>
           {content}
+          {navPanelToggle(isNavPanelOpen, toggleNavPanel)}
         </div>
       </div>
     );

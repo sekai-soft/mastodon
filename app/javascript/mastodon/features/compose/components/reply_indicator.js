@@ -7,6 +7,7 @@ import DisplayName from '../../../components/display_name';
 import { defineMessages, injectIntl } from 'react-intl';
 import ImmutablePureComponent from 'react-immutable-pure-component';
 import AttachmentList from 'mastodon/components/attachment_list';
+import parseGPlusFormatting from 'mastodon/utils/parse_g_plus_formatting'
 
 const messages = defineMessages({
   cancel: { id: 'reply_indicator.cancel', defaultMessage: 'Cancel' },
@@ -43,7 +44,7 @@ class ReplyIndicator extends ImmutablePureComponent {
       return null;
     }
 
-    const content = { __html: status.get('contentHtml') };
+    const content = { __html: parseGPlusFormatting(status.get('contentHtml')) };
 
     return (
       <div className='reply-indicator'>

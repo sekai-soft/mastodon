@@ -91,7 +91,7 @@ class Item extends React.PureComponent {
       width = 100;
     }
 
-    if (size === 4 || (size === 3 && index > 0)) {
+    if (size >= 4 || (size === 3 && index > 0)) {
       height = 50;
     }
 
@@ -101,8 +101,8 @@ class Item extends React.PureComponent {
       } else {
         left = '2px';
       }
-    } else if (size === 3) {
-      if (index === 0) {
+    } else if (size >= 4) {
+      if (index % 2 === 0) {
         right = '2px';
       } else if (index > 0) {
         left = '2px';
@@ -118,7 +118,7 @@ class Item extends React.PureComponent {
         right = '2px';
       }
 
-      if (index === 1 || index === 3) {
+      if (index % 2 === 1) {
         left = '2px';
       }
 
@@ -329,13 +329,13 @@ class MediaGallery extends React.PureComponent {
       style.height = height;
     }
 
-    const size     = media.take(4).size;
+    const size     = media.take(16).size;
     const uncached = media.every(attachment => attachment.get('type') === 'unknown');
 
     if (standalone && this.isFullSizeEligible()) {
       children = <Item standalone autoplay={autoplay} onClick={this.handleClick} attachment={media.get(0)} displayWidth={width} visible={visible} />;
     } else {
-      children = media.take(4).map((attachment, i) => <Item key={attachment.get('id')} autoplay={autoplay} onClick={this.handleClick} attachment={attachment} index={i} size={size} displayWidth={width} visible={visible || uncached} />);
+      children = media.take(16).map((attachment, i) => <Item key={attachment.get('id')} autoplay={autoplay} onClick={this.handleClick} attachment={attachment} index={i} size={size} displayWidth={width} visible={visible || uncached} />);
     }
 
     if (uncached) {

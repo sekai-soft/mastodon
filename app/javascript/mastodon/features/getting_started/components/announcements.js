@@ -16,6 +16,7 @@ import AnimatedNumber from 'mastodon/components/animated_number';
 import TransitionMotion from 'react-motion/lib/TransitionMotion';
 import spring from 'react-motion/lib/spring';
 import { assetHost } from 'mastodon/utils/config';
+import parseGPlusFormatting from 'mastodon/utils/parse_g_plus_formatting'
 
 const messages = defineMessages({
   close: { id: 'lightbox.close', defaultMessage: 'Close' },
@@ -140,7 +141,7 @@ class Content extends ImmutablePureComponent {
       <div
         className='announcements__item__content translate'
         ref={this.setRef}
-        dangerouslySetInnerHTML={{ __html: announcement.get('contentHtml') }}
+        dangerouslySetInnerHTML={{ __html: parseGPlusFormatting(announcement.get('contentHtml')) }}
         onMouseEnter={this.handleMouseEnter}
         onMouseLeave={this.handleMouseLeave}
       />

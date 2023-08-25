@@ -23,6 +23,7 @@ import ComposePanel from './compose_panel';
 import NavigationPanel from './navigation_panel';
 import { supportsPassiveEvents } from 'detect-passive-events';
 import { scrollRight } from '../../../scroll';
+import { shouldShowNavPanel } from '../../../is_mobile';
 
 const componentMap = {
   'COMPOSE': Compose,
@@ -50,6 +51,7 @@ export default class ColumnsArea extends ImmutablePureComponent {
     isModalOpen: PropTypes.bool.isRequired,
     singleColumn: PropTypes.bool,
     children: PropTypes.node,
+    isNavPanelOpen: PropTypes.bool.isRequired,
   };
 
   // Corresponds to (max-width: $no-gap-breakpoint + 285px - 1px) in SCSS
@@ -134,8 +136,16 @@ export default class ColumnsArea extends ImmutablePureComponent {
   };
 
   render () {
-    const { columns, children, singleColumn, isModalOpen } = this.props;
+    const { columns, children, singleColumn, isModalOpen, isNavPanelOpen } = this.props;
     const { renderComposePanel } = this.state;
+
+    let mainPanelsAdditionalStyle;
+    const showNavPanel = shouldShowNavPanel() || isNavPanelOpen;
+    if (showNavPanel) {
+      mainPanelsAdditionalStyle = {};
+    } else {
+      mainPanelsAdditionalStyle = { width: '100%' };
+    }
 
     if (singleColumn) {
       return (
@@ -146,16 +156,18 @@ export default class ColumnsArea extends ImmutablePureComponent {
             </div>
           </div>
 
-          <div className='columns-area__panels__main'>
+          <div className='columns-area__panels__main' style={mainPanelsAdditionalStyle}>
             <div className='tabs-bar__wrapper'><div id='tabs-bar__portal' /></div>
             <div className='columns-area columns-area--mobile'>{children}</div>
           </div>
 
-          <div className='columns-area__panels__pane columns-area__panels__pane--start columns-area__panels__pane--navigational'>
-            <div className='columns-area__panels__pane__inner'>
-              <NavigationPanel />
+          {showNavPanel &&
+            <div className='columns-area__panels__pane columns-area__panels__pane--start columns-area__panels__pane--navigational'>
+              <div className='columns-area__panels__pane__inner'>
+                <NavigationPanel />
+              </div>
             </div>
-          </div>
+          }
         </div>
       );
     }

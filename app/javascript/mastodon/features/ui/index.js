@@ -121,6 +121,7 @@ class SwitchingColumnsArea extends React.PureComponent {
     children: PropTypes.node,
     location: PropTypes.object,
     mobile: PropTypes.bool,
+    isNavPanelOpen: PropTypes.bool.isRequired,
   };
 
   componentWillMount () {
@@ -151,7 +152,7 @@ class SwitchingColumnsArea extends React.PureComponent {
   };
 
   render () {
-    const { children, mobile } = this.props;
+    const { children, mobile, isNavPanelOpen } = this.props;
     const { signedIn } = this.context.identity;
 
     let redirect;
@@ -171,7 +172,7 @@ class SwitchingColumnsArea extends React.PureComponent {
     }
 
     return (
-      <ColumnsAreaContainer ref={this.setRef} singleColumn={mobile}>
+      <ColumnsAreaContainer ref={this.setRef} singleColumn={mobile} isNavPanelOpen={isNavPanelOpen}>
         <WrappedSwitch>
           {redirect}
 
@@ -256,6 +257,7 @@ class UI extends React.PureComponent {
 
   state = {
     draggingOver: false,
+    isNavPanelOpen: false,
   };
 
   handleBeforeUnload = e => {
@@ -541,8 +543,12 @@ class UI extends React.PureComponent {
     this.context.router.history.push('/follow_requests');
   };
 
+  handleToggleNavPanel = () => {
+    this.setState({ isNavPanelOpen: !this.state.isNavPanelOpen });
+  };
+
   render () {
-    const { draggingOver } = this.state;
+    const { draggingOver, isNavPanelOpen } = this.state;
     const { children, isComposing, location, dropdownMenuIsOpen, layout } = this.props;
 
     const handlers = {
@@ -565,14 +571,15 @@ class UI extends React.PureComponent {
       goToBlocked: this.handleHotkeyGoToBlocked,
       goToMuted: this.handleHotkeyGoToMuted,
       goToRequests: this.handleHotkeyGoToRequests,
+      handleToggleNavPanel: this.handleToggleNavPanel,
     };
 
     return (
       <HotKeys keyMap={keyMap} handlers={handlers} ref={this.setHotkeysRef} attach={window} focused>
         <div className={classNames('ui', { 'is-composing': isComposing })} ref={this.setRef} style={{ pointerEvents: dropdownMenuIsOpen ? 'none' : null }}>
-          <Header />
+          <Header isNavPanelOpen={isNavPanelOpen} toggleNavPanel={this.handleToggleNavPanel} />
 
-          <SwitchingColumnsArea location={location} mobile={layout === 'mobile' || layout === 'single-column'}>
+          <SwitchingColumnsArea location={location} mobile={layout === 'mobile' || layout === 'single-column'} isNavPanelOpen={isNavPanelOpen}>
             {children}
           </SwitchingColumnsArea>
 
