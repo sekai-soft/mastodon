@@ -7,6 +7,9 @@ const GPlusStrikeThrough = /(^|\s|<p>)-(.+?)-($|\s|<\/p>)/gm
 const MastodonNewLine = '<br />'
 
 const parseGPlusFormatting = (contentHtml) => {
+  if (!contentHtml) {
+    return contentHtml
+  }
   return contentHtml
     .split(MastodonNewLine)
     .map(line => {
