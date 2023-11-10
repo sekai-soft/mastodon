@@ -1744,9 +1744,8 @@ en:
     mstdn: mstdn (by @stux@mstdn.social)
     photon-dark: Photon Dark (by @stux@mstdn.social)
     photon-light: Photon Light (by @stux@mstdn.social)
-    elephant: Bird UI (by @stux@mstdn.social)
-    elephant-contrast: Bird UI (High Contrast) (by @stux@mstdn.social)
-    elephant-light: Bird UI (Light) (by @stux@mstdn.social)
+    mastodon-bird-ui-light: Mastodon Bird UI Light (by @rolle@mementomori.social)
+    mastodon-bird-ui-dark: Mastodon Bird UI Dark (by @rolle@mementomori.social)
   time:
     formats:
       default: "%b %d, %Y, %H:%M"

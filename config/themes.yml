@@ -11,6 +11,5 @@ light-yellow: styles/light_yellow.scss
 mstdn: styles/mstdn.scss
 photon-dark: styles/photon_dark.scss
 photon-light: styles/photon_light.scss
-elephant: styles/elephant.scss
-elephant-contrast: styles/elephant-contrast.scss
-elephant-light: styles/elephant-light.scss
+mastodon-bird-ui-light: styles/mastodon-bird-ui-light.scss
+mastodon-bird-ui-dark: styles/mastodon-bird-ui-dark.scss
