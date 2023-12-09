@@ -32,3 +32,7 @@ const touchListener = () => {
 window.addEventListener('touchstart', touchListener, listenerOptions);
 
 export const isUserTouching = () => userTouching;
+
+export const shouldShowNavPanel = (): boolean => {
+  return layoutFromWindow() !== 'mobile';
+};

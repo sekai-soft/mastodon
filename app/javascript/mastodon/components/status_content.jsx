@@ -12,6 +12,7 @@ import { connect } from 'react-redux';
 import { Icon }  from 'mastodon/components/icon';
 import PollContainer from 'mastodon/containers/poll_container';
 import { autoPlayGif, languages as preloadedLanguages } from 'mastodon/initial_state';
+import parseGPlusFormatting from 'mastodon/utils/parse_g_plus_formatting'
 
 const MAX_HEIGHT = 706; // 22px * 32 (+ 2px padding at the top)
 
@@ -21,7 +22,7 @@ const MAX_HEIGHT = 706; // 22px * 32 (+ 2px padding at the top)
  * @returns {string}
  */
 export function getStatusContent(status) {
-  return status.getIn(['translation', 'contentHtml']) || status.get('contentHtml');
+  return parseGPlusFormatting(status.getIn(['translation', 'contentHtml'])) || parseGPlusFormatting(status.get('contentHtml'));
 }
 
 class TranslateButton extends PureComponent {
@@ -244,7 +245,7 @@ class StatusContent extends PureComponent {
     const renderTranslate = this.props.onTranslate && this.context.identity.signedIn && ['public', 'unlisted'].includes(status.get('visibility')) && status.get('search_index').trim().length > 0 && targetLanguages?.includes(contentLocale);
 
     const content = { __html: statusContent ?? getStatusContent(status) };
-    const spoilerContent = { __html: status.getIn(['translation', 'spoilerHtml']) || status.get('spoilerHtml') };
+    const spoilerContent = { __html: parseGPlusFormatting(status.getIn(['translation', 'spoilerHtml'])) || parseGPlusFormatting(status.get('spoilerHtml')) };
     const language = status.getIn(['translation', 'language']) || status.get('language');
     const classNames = classnames('status__content', {
       'status__content--with-action': this.props.onClick && this.context.router,
