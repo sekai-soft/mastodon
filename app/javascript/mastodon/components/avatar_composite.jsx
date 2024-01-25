@@ -33,7 +33,7 @@ export default class AvatarComposite extends PureComponent {
       width = 100;
     }
 
-    if (size === 4 || (size === 3 && index > 0)) {
+    if (size >= 4 || (size === 3 && index > 0)) {
       height = 50;
     }
 
@@ -55,12 +55,12 @@ export default class AvatarComposite extends PureComponent {
       } else if (index > 1) {
         top = '1px';
       }
-    } else if (size === 4) {
-      if (index === 0 || index === 2) {
+    } else if (size >= 4) {
+      if (index % 2 === 0) {
         right = '1px';
       }
 
-      if (index === 1 || index === 3) {
+      if (index % 2 === 1) {
         left = '1px';
       }
 
