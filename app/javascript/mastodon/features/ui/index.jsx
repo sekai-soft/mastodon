@@ -127,6 +127,7 @@ class SwitchingColumnsArea extends PureComponent {
     children: PropTypes.node,
     location: PropTypes.object,
     singleColumn: PropTypes.bool,
+    isNavPanelOpen: PropTypes.bool.isRequired,
   };
 
   UNSAFE_componentWillMount () {
@@ -157,7 +158,7 @@ class SwitchingColumnsArea extends PureComponent {
   };
 
   render () {
-    const { children, singleColumn } = this.props;
+    const { children, singleColumn, isNavPanelOpen } = this.props;
     const { signedIn } = this.context.identity;
     const pathName = this.props.location.pathname;
 
@@ -178,7 +179,7 @@ class SwitchingColumnsArea extends PureComponent {
     }
 
     return (
-      <ColumnsAreaContainer ref={this.setRef} singleColumn={singleColumn}>
+      <ColumnsAreaContainer ref={this.setRef} singleColumn={singleColumn} isNavPanelOpen={isNavPanelOpen}>
         <WrappedSwitch>
           {redirect}
 
@@ -267,6 +268,7 @@ class UI extends PureComponent {
 
   state = {
     draggingOver: false,
+    isNavPanelOpen: localStorage.getItem('kt_is_nav_panel_open', '0') == '1',
   };
 
   handleBeforeUnload = e => {
@@ -281,6 +283,12 @@ class UI extends PureComponent {
       // but we set user-friendly message for other browsers, e.g. Edge.
       e.returnValue = intl.formatMessage(messages.beforeUnload);
     }
+  };
+
+  handleToggleNavPanel = () => {
+    const newState = !this.state.isNavPanelOpen;
+    this.setState({ isNavPanelOpen: newState });
+    localStorage.setItem('kt_is_nav_panel_open', newState ? '1' : '0');
   };
 
   handleWindowFocus = () => {
@@ -550,7 +558,7 @@ class UI extends PureComponent {
   };
 
   render () {
-    const { draggingOver } = this.state;
+    const { draggingOver, isNavPanelOpen } = this.state;
     const { children, isComposing, location, dropdownMenuIsOpen, layout } = this.props;
 
     const handlers = {
@@ -573,14 +581,15 @@ class UI extends PureComponent {
       goToBlocked: this.handleHotkeyGoToBlocked,
       goToMuted: this.handleHotkeyGoToMuted,
       goToRequests: this.handleHotkeyGoToRequests,
+      handleToggleNavPanel: this.handleToggleNavPanel
     };
 
     return (
       <HotKeys keyMap={keyMap} handlers={handlers} ref={this.setHotkeysRef} attach={window} focused>
         <div className={classNames('ui', { 'is-composing': isComposing })} ref={this.setRef} style={{ pointerEvents: dropdownMenuIsOpen ? 'none' : null }}>
-          <Header />
+          <Header isNavPanelOpen={isNavPanelOpen} toggleNavPanel={this.handleToggleNavPanel} />
 
-          <SwitchingColumnsArea location={location} singleColumn={layout === 'mobile' || layout === 'single-column'}>
+          <SwitchingColumnsArea location={location} singleColumn={layout === 'mobile' || layout === 'single-column'} isNavPanelOpen={isNavPanelOpen}>
             {children}
           </SwitchingColumnsArea>
 
