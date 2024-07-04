@@ -14,6 +14,8 @@ import { Icon } from 'mastodon/components/icon';
 import { WordmarkLogo, SymbolLogo } from 'mastodon/components/logo';
 import { registrationsOpen, me, sso_redirect } from 'mastodon/initial_state';
 
+import { shouldShowNavPanel } from '../../../is_mobile';
+
 const Account = connect(state => ({
   account: state.getIn(['accounts', me]),
 }))(({ account }) => (
@@ -21,6 +23,19 @@ const Account = connect(state => ({
     <Avatar account={account} size={35} />
   </Link>
 ));
+
+const navPanelToggle = (isNavPanelOpen, toggleNavPanel) => {
+  if (shouldShowNavPanel()) {
+    return null;
+  }
+  return (
+    <div style={{ width: '32px' }} onClick={toggleNavPanel} onKeyPress={toggleNavPanel} role='button' tabIndex={0}>
+      <div style={{ width: '50%', margin: '0 auto' }}>
+        {isNavPanelOpen ? <i className='fa fa-times' /> : <i className='fa fa-bars' />}
+      </div>
+    </div>
+  );
+};
 
 const messages = defineMessages({
   search: { id: 'navigation_bar.search', defaultMessage: 'Search' },
@@ -51,6 +66,8 @@ class Header extends PureComponent {
     signupUrl: PropTypes.string.isRequired,
     dispatchServer: PropTypes.func,
     intl: PropTypes.object.isRequired,
+    isNavPanelOpen: PropTypes.bool.isRequired,
+    toggleNavPanel: PropTypes.func.isRequired,
   };
 
   componentDidMount () {
@@ -60,7 +77,7 @@ class Header extends PureComponent {
 
   render () {
     const { signedIn } = this.context.identity;
-    const { location, openClosedRegistrationsModal, signupUrl, intl } = this.props;
+    const { location, openClosedRegistrationsModal, signupUrl, intl, isNavPanelOpen, toggleNavPanel } = this.props;
 
     let content;
 
@@ -113,6 +130,7 @@ class Header extends PureComponent {
 
         <div className='ui__header__links'>
           {content}
+          {navPanelToggle(isNavPanelOpen, toggleNavPanel)}
         </div>
       </div>
     );
