@@ -1807,6 +1807,18 @@ en:
     default: Mastodon (Dark)
     mastodon-light: Mastodon (Light)
     system: Automatic (use system theme)
+    dark-green: Dark Green (by @stux@mstdn.social)
+    dark-red: Dark Red (by @stux@mstdn.social)
+    dark-yellow: Dark Yellow (by @stux@mstdn.social)
+    geodude: Geodude (by @stux@mstdn.social)
+    light-green: Light Green (by @stux@mstdn.social)
+    light-red: Light Red (by @stux@mstdn.social)
+    light-yellow: Light Yellow (by @stux@mstdn.social)
+    mstdn: mstdn (by @stux@mstdn.social)
+    photon-dark: Photon Dark (by @stux@mstdn.social)
+    photon-light: Photon Light (by @stux@mstdn.social)
+    mastodon-bird-ui-light: Mastodon Bird UI Light (by @rolle@mementomori.social)
+    mastodon-bird-ui-dark: Mastodon Bird UI Dark (by @rolle@mementomori.social)
   time:
     formats:
       default: "%b %d, %Y, %H:%M"
