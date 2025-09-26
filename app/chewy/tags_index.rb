@@ -4,9 +4,19 @@ class TagsIndex < Chewy::Index
   include DatetimeClampingConcern
 
   settings index: index_preset(refresh_interval: '30s'), analysis: {
+    char_filter: {
+      tsconvert: {
+        type: 'stconvert',
+        keep_both: false,
+        delimiter: '#',
+        convert_type: 't2s',
+      },
+    },
+
     analyzer: {
       content: {
-        tokenizer: 'keyword',
+        tokenizer: 'ik_smart',
+        char_filter: %w(tsconvert),
         filter: %w(
           word_delimiter_graph
           lowercase
