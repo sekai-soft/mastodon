@@ -1,3 +1,15 @@
 default: styles/application.scss
 contrast: styles/contrast.scss
 mastodon-light: styles/mastodon-light.scss
+dark-green: styles/dark_green.scss
+dark-red: styles/dark_red.scss
+dark-yellow: styles/dark_yellow.scss
+geodude: styles/geodude.scss
+light-green: styles/light_green.scss
+light-red: styles/light_red.scss
+light-yellow: styles/light_yellow.scss
+mstdn: styles/mstdn.scss
+photon-dark: styles/photon_dark.scss
+photon-light: styles/photon_light.scss
+mastodon-bird-ui-light: styles/mastodon-bird-ui-light.scss
+mastodon-bird-ui-dark: styles/mastodon-bird-ui-dark.scss
